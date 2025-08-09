@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Académico: Ecosistema de Conocimiento Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.6)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2940&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4f46e5;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link.active::after, .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: #4f46e5; /* indigo-600 */
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Contenedor Principal -->
+    <div id="app" class="min-h-screen flex flex-col">
+
+        <!-- Encabezado y Navegación -->
+        <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="text-2xl font-bold text-gray-900" onclick="showPage('inicio')">
+                        Nexus Académico
+                    </a>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" id="nav-inicio" class="nav-link" onclick="showPage('inicio')">Inicio</a>
+                        <a href="#" id="nav-servicios" class="nav-link" onclick="showPage('servicios')">Servicios</a>
+                        <a href="#" id="nav-hub" class="nav-link" onclick="showPage('hub')">Hub de Conocimiento</a>
+                        <a href="#" id="nav-politicas" class="nav-link" onclick="showPage('politicas')">Políticas</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded" onclick="showPage('inicio'); closeMenu();">Inicio</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded" onclick="showPage('servicios'); closeMenu();">Servicios</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded" onclick="showPage('hub'); closeMenu();">Hub de Conocimiento</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded" onclick="showPage('politicas'); closeMenu();">Políticas</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="flex-grow">
+
+            <!-- Página de Inicio -->
+            <section id="inicio" class="page-section">
+                <div class="hero-bg text-white">
+                    <div class="container mx-auto px-6 py-40 text-center flex flex-col items-center">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4">Nexus Académico</h1>
+                        <p class="text-xl md:text-2xl font-light max-w-3xl">Un ecosistema digital diseñado para potenciar la investigación, el aprendizaje y la colaboración universitaria.</p>
+                        <button onclick="showPage('servicios')" class="mt-8 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">Explorar Servicios</button>
+                    </div>
+                </div>
+                <!-- Sección de bienvenida -->
+                <div class="py-20 bg-gray-50">
+                    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-6">Más que una Biblioteca, un Centro de Innovación.</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed mb-4">En Nexus Académico, trascendemos el concepto tradicional de biblioteca. Somos una plataforma dinámica que integra recursos de vanguardia, servicios de apoyo a la investigación y espacios de colaboración para estudiantes, docentes e investigadores. Nuestra misión es ser el catalizador de su éxito académico y profesional.</p>
+                            <p class="text-lg text-gray-600 leading-relaxed">Descubra colecciones especializadas, participe en seminarios web exclusivos y conecte con una comunidad que comparte su pasión por el conocimiento.</p>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2874&auto=format&fit=crop" alt="Colaboración académica" class="rounded-lg shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página: Servicios -->
+            <section id="servicios" class="page-section py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl font-bold text-center mb-4">Nuestros Servicios</h1>
+                    <p class="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">Apoyo integral para la comunidad universitaria en su búsqueda de conocimiento.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Servicio 1: Referencia en línea -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Servicio de Referencia en Línea</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Atención a través de chat, correo o formularios, donde un bibliotecario orienta en la búsqueda de información y resolución de dudas.</p>
+                            <a href="referencia-online.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Contactar Referencista</a>
+                        </div>
+                        <!-- Servicio 2: Búsqueda y localización -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Búsqueda y Localización de Recursos</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Herramientas de búsqueda avanzada con filtros por tema, autor o fecha para encontrar rápidamente libros, artículos y otros recursos.</p>
+                            <a href="busqueda-recursos.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Iniciar Búsqueda</a>
+                        </div>
+                        <!-- Servicio 3: Guías y tutoriales -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Guías Temáticas y Tutoriales</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Documentos y videos que explican cómo utilizar bases de datos, herramientas de investigación y estrategias de búsqueda efectiva.</p>
+                            <a href="guias-tutoriales.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Explorar Guías</a>
+                        </div>
+                        <!-- Servicio 4: Acceso a bases de datos -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Acceso a Bases de Datos y Recursos</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Enlaces a repositorios académicos, revistas científicas, bibliotecas digitales y colecciones multimedia de libre acceso o con licencia.</p>
+                            <a href="bases-datos.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Ver Recursos</a>
+                        </div>
+                        <!-- Servicio 5: FAQ -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Preguntas Frecuentes (FAQ)</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Respuestas a las dudas más comunes para resolver problemas sin necesidad de solicitar asistencia personalizada.</p>
+                            <a href="faq.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Consultar FAQ</a>
+                        </div>
+                        <!-- Servicio 6: Actualización de contenidos -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-indigo-100 transition-shadow duration-300 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3">Servicio de Actualización de Contenidos</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Notificaciones periódicas con novedades, recursos recién incorporados y recomendaciones de lectura según su área de interés.</p>
+                            <a href="actualizacion-contenidos.html" class="mt-auto bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors text-center">Ver Novedades</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página: Hub de Conocimiento -->
+            <section id="hub" class="page-section py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl font-bold text-center mb-4">Hub de Conocimiento</h1>
+                    <p class="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">Explore artículos, análisis y proyectos destacados de nuestra comunidad académica.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Artículo de ejemplo 1 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?q=80&w=2942&auto=format&fit=crop" alt="Tecnología" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-sm text-indigo-600 font-semibold">Inteligencia Artificial</span>
+                                <h3 class="text-xl font-bold my-2">El Impacto de los Modelos de Lenguaje en la Investigación Científica</h3>
+                                <p class="text-gray-600 text-sm">Un análisis sobre cómo herramientas como GPT-4 están transformando la redacción y el análisis de datos en las ciencias sociales.</p>
+                            </div>
+                        </div>
+                        <!-- Artículo de ejemplo 2 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1554493345-1f625ea4b3ca?q=80&w=2940&auto=format&fit=crop" alt="Sostenibilidad" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-sm text-indigo-600 font-semibold">Sostenibilidad</span>
+                                <h3 class="text-xl font-bold my-2">Nuevos Materiales para un Futuro Sostenible: El Caso del Bioplástico</h3>
+                                <p class="text-gray-600 text-sm">Investigadores de nuestra universidad publican hallazgos prometedores sobre polímeros derivados de fuentes renovables.</p>
+                            </div>
+                        </div>
+                        <!-- Artículo de ejemplo 3 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2940&auto=format&fit=crop" alt="Medicina" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-sm text-indigo-600 font-semibold">Ciencias de la Salud</span>
+                                <h3 class="text-xl font-bold my-2">Avances en la Detección Temprana de Enfermedades Neurodegenerativas</h3>
+                                <p class="text-gray-600 text-sm">Un estudio colaborativo internacional presenta un nuevo marcador biológico para el diagnóstico precoz.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="text-center mt-16">
+                        <button id="open-modal-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">¿Deseas enviar tu trabajo?</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página: Políticas -->
+            <section id="politicas" class="page-section py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl font-bold text-center mb-12">Políticas de Uso y Recepción de Artículos</h1>
+                    <div class="max-w-4xl mx-auto bg-gray-50 p-10 rounded-lg shadow-md">
+                        <div class="space-y-10">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 border-l-4 border-indigo-600 pl-4">Selección</h3>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li>En el proceso de selección de los diversos materiales que son ingresados a las colecciones bibliográficas, se debe tener en cuenta las necesidades de las personas con capacidades especiales.</li>
+                                    <li>Información obtenida por docentes e investigadores.</li>
+                                    <li>Se debe cubrir las necesidades de información básica de la comunidad a la que sirve esta biblioteca.</li>
+                                    <li>Se realiza la respectiva investigación sobre los autores que envían sus artículos para asegurar que son reconocidos en el área y aportan conocimientos desde otras perspectivas.</li>
+                                    <li>Investigar la fiabilidad y calidad de la editorial o entidad patrocinadora.</li>
+                                    <li>Diagnóstico del idioma del documento de acuerdo a la obra y la importancia de la investigación.</li>
+                                    <li>Para el tipo de material y formato, se debe evaluar el soporte (analógico o digital) en que se encuentre registrada la obra para un correcto manejo.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 border-l-4 border-indigo-600 pl-4">Evaluación</h3>
+                                <p class="text-gray-700 mb-4">Es importante evaluar las colecciones para que la cantidad y calidad del material sea consistente con el número de usuarios, la variedad de programas y las necesidades de investigación. La evaluación se basa en dos métodos:</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Método cuantitativo:</strong> Se investigan los artículos seleccionados acorde a su temática, realizando datos de inventarios y catálogos según el tipo y área del artículo.</li>
+                                    <li><strong>Método cualitativo:</strong> Comparaciones entre bibliografía obligatoria y complementaria, opinión de expertos y comparaciones con fondos bibliotecarios de características similares.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 border-l-4 border-indigo-600 pl-4">Descarte</h3>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li>Las bibliotecas deben lograr la renovación y constante actualización de sus colecciones, descartando materiales de baja utilización registrados por un período específico.</li>
+                                    <li>El descarte no implica necesariamente la eliminación física de los artículos.</li>
+                                    <li>El descarte será realizado por el sistema bibliotecario en colaboración con las entidades designadas y los estudiantes.</li>
+                                    <li>Se tendrá en cuenta el valor histórico de las colecciones y los fondos especiales que se establezcan.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 border-l-4 border-indigo-600 pl-4">Adquisición</h3>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li>La adquisición estará a cargo del área de desarrollo de colecciones, supervisada por la directiva de la biblioteca.</li>
+                                    <li>El sistema gestionará las adquisiciones con autonomía y el control presupuestario será compartido.</li>
+                                    <li>La compra es el principal medio de adquisición, manteniendo actualizadas las fuentes de información sobre editores, distribuidores y libreros.</li>
+                                    <li>Se facilitarán alianzas estratégicas y soluciones de adquisición compartida.</li>
+                                    <li>Las donaciones se recibirán luego de un análisis de costo-beneficio para no asumir obligaciones onerosas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="bg-gray-900 text-white">
+            <div class="container mx-auto px-6 py-8 text-center">
+                <p>&copy; 2025 Nexus Académico. Un Ecosistema de Conocimiento Digital.</p>
+                <a href="#" class="text-indigo-400 hover:underline mt-2 inline-block" onclick="showPage('politicas')">Políticas de Uso y Recepción</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Modal para envío de trabajos -->
+    <div id="submission-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-container bg-white w-full max-w-lg p-8 rounded-lg shadow-2xl relative transform scale-95">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-6">Enviar Trabajo a Revisión</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo</label>
+                    <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
+                    <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-6">
+                    <label for="file" class="block text-gray-700 text-sm font-bold mb-2">Adjuntar Archivo (PDF, DOCX)</label>
+                    <input type="file" id="file" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" accept=".pdf,.docx" required>
+                </div>
+                <div class="flex items-center justify-end">
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.page-section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const modal = document.getElementById('submission-modal');
+        const openModalButton = document.getElementById('open-modal-button');
+        const closeModalButton = document.getElementById('close-modal-button');
+
+        function showPage(pageId) {
+            pages.forEach(page => page.classList.remove('active'));
+            const activePage = document.getElementById(pageId);
+            if (activePage) activePage.classList.add('active');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.id === `nav-${pageId}`) {
+                    link.classList.add('active');
+                }
+            });
+            window.scrollTo(0, 0);
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        openModalButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                modal.querySelector('.modal-overlay').classList.add('opacity-100');
+                modal.querySelector('.modal-container').classList.remove('scale-95');
+            }, 10);
+        });
+
+        function closeModal() {
+             modal.querySelector('.modal-overlay').classList.remove('opacity-100');
+             modal.querySelector('.modal-container').classList.add('scale-95');
+             setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        closeModalButton.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('inicio');
+        });
+    </script>
+</body>
+</html>

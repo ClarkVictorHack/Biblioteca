@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Actualización de Contenidos - Nexus Académico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Encabezado -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="bibliotecavirtual.html" class="text-2xl font-bold text-gray-900">
+                    Nexus Académico
+                </a>
+                <a href="bibliotecavirtual.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">
+                    ← Volver al inicio
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="py-12">
+        <div class="container mx-auto px-6">
+            <!-- Hero Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Actualización de Contenidos</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Manténgase informado sobre las últimas novedades, recursos recién incorporados y recomendaciones personalizadas</p>
+            </div>
+
+            <!-- Suscripción a Notificaciones -->
+            <div class="max-w-2xl mx-auto mb-16 bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-lg shadow-lg text-white">
+                <h2 class="text-2xl font-bold mb-4 text-center">Suscríbase a Nuestras Notificaciones</h2>
+                <p class="text-center mb-6">Reciba actualizaciones personalizadas según sus áreas de interés</p>
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nombre completo" class="px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                        <input type="email" placeholder="Correo electrónico" class="px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Frecuencia de notificaciones:</label>
+                        <select class="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                            <option value="diaria">Diaria</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="quincenal">Quincenal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+
+            <!-- Últimas Novedades -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">Últimas Novedades</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Novedad 1 -->
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Nueva Base de Datos</span>
+                                <span class="text-gray-500 text-sm">Hace 2 días</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">SpringerLink - Colección Completa</h3>
+                            <p class="text-gray-600 mb-4">Ahora tenemos acceso completo a la plataforma SpringerLink con más de 3 millones de documentos científicos en todas las áreas del conocimiento.</p>
+                            <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                Explorar Colección
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Novedad 2 -->
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Nuevo Servicio</span>
+                                <span class="text-gray-500 text-sm">Hace 5 días</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Asistente de Investigación con IA</h3>
+                            <p class="text-gray-600 mb-4">Lanzamos un nuevo asistente basado en inteligencia artificial para ayudar en la búsqueda y análisis de literatura científica.</p>
+                            <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                Probar Asistente
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Novedad 3 -->
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Actualización</span>
+                                <span class="text-gray-500 text-sm">Hace 1 semana</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Nuevas Guías de Citación APA 7</h3>
+                            <p class="text-gray-600 mb-4">Actualizamos nuestras guías de citación con los últimos cambios del manual APA 7ª edición, incluyendo nuevos ejemplos prácticos.</p>
+                            <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                Ver Guías
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recursos Recién Incorporados -->
+            <div class="mb-16 bg-gray-50 p-8 rounded-lg">
+                <h2 class="text-3xl font-bold text-center mb-8">Recursos Recién Incorporados</h2>
+                <div class="space-y-6">
+                    <!-- Recurso 1 -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-indigo-700 mb-2">Handbook of Artificial Intelligence in Healthcare</h3>
+                                <p class="text-gray-600 mb-2"><strong>Autores:</strong> Zhang, Li, Rodriguez, M. et al.</p>
+                                <p class="text-gray-600 mb-2"><strong>Editorial:</strong> Academic Press, 2024</p>
+                                <p class="text-gray-700">Manual completo sobre aplicaciones de IA en medicina, incluyendo diagnóstico por imágenes, medicina personalizada y análisis predictivo.</p>
+                            </div>
+                            <div class="ml-6 text-center">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full mb-2 block">Nuevo</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition-colors">
+                                    Acceder
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recurso 2 -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-indigo-700 mb-2">Sustainable Urban Development: Global Perspectives</h3>
+                                <p class="text-gray-600 mb-2"><strong>Revista:</strong> Urban Studies Quarterly, Vol. 41, No. 2</p>
+                                <p class="text-gray-600 mb-2"><strong>Fecha:</strong> Marzo 2024</p>
+                                <p class="text-gray-700">Número especial dedicado a estrategias de desarrollo urbano sostenible con casos de estudio de ciudades latinoamericanas.</p>
+                            </div>
+                            <div class="ml-6 text-center">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full mb-2 block">Nuevo</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition-colors">
+                                    Leer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recurso 3 -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-indigo-700 mb-2">Quantum Computing: Algorithms and Applications</h3>
+                                <p class="text-gray-600 mb-2"><strong>Autores:</strong> Chen, W., Patel, S., Johnson, K.</p>
+                                <p class="text-gray-600 mb-2"><strong>Tipo:</strong> Tesis Doctoral, MIT, 2024</p>
+                                <p class="text-gray-700">Investigación sobre algoritmos cuánticos para optimización y sus aplicaciones en criptografía y simulación molecular.</p>
+                            </div>
+                            <div class="ml-6 text-center">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full mb-2 block">Nuevo</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition-colors">
+                                    Descargar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recomendaciones Personalizadas -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">Recomendaciones Personalizadas</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Basado en su área de interés -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-indigo-700">Basado en su área: Ciencias de la Computación</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-indigo-500 pl-4">
+                                <h4 class="font-semibold">Machine Learning in Bioinformatics</h4>
+                                <p class="text-sm text-gray-600">Revista: Nature Machine Intelligence, 2024</p>
+                            </div>
+                            <div class="border-l-4 border-indigo-500 pl-4">
+                                <h4 class="font-semibold">Deep Learning for Computer Vision</h4>
+                                <p class="text-sm text-gray-600">Libro: MIT Press, 2024</p>
+                            </div>
+                            <div class="border-l-4 border-indigo-500 pl-4">
+                                <h4 class="font-semibold">Ethical AI Development Framework</h4>
+                                <p class="text-sm text-gray-600">Artículo: IEEE Computer Society, 2024</p>
+                            </div>
+                        </div>
+                        <button class="mt-4 w-full bg-indigo-100 text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-200 transition-colors">
+                            Ver Todas las Recomendaciones
+                        </button>
+                    </div>
+
+                    <!-- Trending en su universidad -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">Trending en su Universidad</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-semibold">Climate Change Impact Assessment</h4>
+                                <p class="text-sm text-gray-600">📈 +45% consultas esta semana</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-semibold">Renewable Energy Technologies</h4>
+                                <p class="text-sm text-gray-600">📈 +32% consultas esta semana</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-semibold">Digital Transformation in Education</h4>
+                                <p class="text-sm text-gray-600">📈 +28% consultas esta semana</p>
+                            </div>
+                        </div>
+                        <button class="mt-4 w-full bg-green-100 text-green-700 font-semibold py-2 px-4 rounded-lg hover:bg-green-200 transition-colors">
+                            Explorar Tendencias
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferencias de Notificación -->
+            <div class="bg-indigo-50 p-8 rounded-lg">
+                <h2 class="text-2xl font-bold text-center mb-8 text-indigo-800">Personalice sus Notificaciones</h2>
+                <div class="max-w-3xl mx-auto">
+                    <form class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Áreas de Interés</h3>
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Ciencias de la Computación</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Medicina y Salud</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Ingeniería</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Ciencias Sociales</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Humanidades</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Educación</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Tipos de Contenido</h3>
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600" checked>
+                                    <span>Nuevas bases de datos</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600" checked>
+                                    <span>Artículos destacados</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Eventos y seminarios</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600">
+                                    <span>Nuevos servicios</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                                Guardar Preferencias
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Nexus Académico. Un Ecosistema de Conocimiento Digital.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

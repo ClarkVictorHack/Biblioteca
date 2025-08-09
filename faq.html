@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes (FAQ) - Nexus Académico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-content.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Encabezado -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="bibliotecavirtual.html" class="text-2xl font-bold text-gray-900">
+                    Nexus Académico
+                </a>
+                <a href="bibliotecavirtual.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">
+                    ← Volver al inicio
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="py-12">
+        <div class="container mx-auto px-6">
+            <!-- Hero Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Encuentre respuestas rápidas a las consultas más comunes sobre nuestros servicios</p>
+            </div>
+
+            <!-- Buscador de FAQ -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" id="faq-search" placeholder="Buscar en preguntas frecuentes..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <svg class="w-5 h-5 text-gray-400 absolute left-4 top-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Categorías de FAQ -->
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="category-btn active bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold transition-colors" data-category="all">
+                        Todas
+                    </button>
+                    <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition-colors" data-category="acceso">
+                        Acceso y Registro
+                    </button>
+                    <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition-colors" data-category="busqueda">
+                        Búsqueda
+                    </button>
+                    <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition-colors" data-category="prestamos">
+                        Préstamos
+                    </button>
+                    <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition-colors" data-category="tecnico">
+                        Problemas Técnicos
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preguntas Frecuentes -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Acceso y Registro -->
+                <div class="faq-item mb-4" data-category="acceso">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Cómo puedo obtener acceso a las bases de datos con suscripción?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Para acceder a las bases de datos con suscripción, debe usar sus credenciales universitarias (usuario y contraseña institucional). Si es estudiante, docente o investigador de la universidad, automáticamente tiene acceso. Si tiene problemas, contacte al servicio de soporte técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4" data-category="acceso">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Puedo acceder a los recursos desde fuera del campus?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Sí, puede acceder desde cualquier lugar usando el proxy institucional o VPN de la universidad. Simplemente inicie sesión con sus credenciales universitarias en el portal de la biblioteca para obtener acceso remoto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Búsqueda -->
+                <div class="faq-item mb-4" data-category="busqueda">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Cómo puedo hacer búsquedas más efectivas?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700 mb-3">Para búsquedas más efectivas, use:</p>
+                                <ul class="text-gray-700 list-disc list-inside space-y-1">
+                                    <li>Comillas para frases exactas: "inteligencia artificial"</li>
+                                    <li>Operadores booleanos: AND, OR, NOT</li>
+                                    <li>Asterisco (*) para truncamiento: educ* (encuentra educación, educativo, etc.)</li>
+                                    <li>Filtros por fecha, tipo de documento y área temática</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4" data-category="busqueda">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Qué hago si no encuentro lo que busco?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Si no encuentra lo que busca, puede: 1) Contactar nuestro servicio de referencia para obtener ayuda personalizada, 2) Solicitar la adquisición del material si es relevante para los programas académicos, 3) Explorar bases de datos alternativas o repositorios de acceso abierto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Préstamos -->
+                <div class="faq-item mb-4" data-category="prestamos">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Cuántos libros puedo tomar prestados y por cuánto tiempo?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Los estudiantes de pregrado pueden tomar hasta 5 libros por 15 días, estudiantes de posgrado hasta 8 libros por 30 días, y docentes/investigadores hasta 15 libros por 60 días. Las renovaciones están permitidas si no hay reservas pendientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4" data-category="prestamos">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Cómo puedo renovar mis préstamos?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Puede renovar sus préstamos en línea a través del catálogo, por teléfono, o presencialmente en el mostrador de circulación. La renovación debe hacerse antes de la fecha de vencimiento y solo es posible si no hay reservas del material.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problemas Técnicos -->
+                <div class="faq-item mb-4" data-category="tecnico">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">No puedo acceder a una base de datos, ¿qué debo hacer?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Primero verifique su conexión a internet y credenciales. Si el problema persiste, limpie la caché del navegador, desactive extensiones que puedan interferir, o intente desde otro navegador. Si aún tiene problemas, contacte soporte técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4" data-category="tecnico">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Por qué no puedo descargar un PDF?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Las restricciones de descarga pueden deberse a limitaciones de la licencia, problemas de autenticación, o configuración del navegador. Verifique que tiene permisos de acceso, actualice el navegador, o contacte a soporte si el problema persiste.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Normas de Citación -->
+                <div class="faq-item mb-4" data-category="busqueda">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Dónde puedo encontrar ayuda con las normas de citación?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Ofrecemos guías completas de citación APA, MLA, IEEE y otros estilos en nuestra sección de Guías y Tutoriales. También puede usar nuestro generador automático de citas o solicitar ayuda personalizada a nuestros bibliotecarios de referencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horarios y Contacto -->
+                <div class="faq-item mb-4" data-category="acceso">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="text-lg font-semibold">¿Cuáles son los horarios de atención?</h3>
+                            <svg class="w-5 h-5 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content bg-gray-50">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-700">Nuestros servicios digitales están disponibles 24/7. La atención personalizada por chat y teléfono es de lunes a viernes de 8:00 AM a 8:00 PM, sábados de 9:00 AM a 5:00 PM. Los domingos solo atendemos consultas por correo electrónico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacto Directo -->
+            <div class="mt-16 bg-indigo-50 p-8 rounded-lg text-center">
+                <h2 class="text-2xl font-bold mb-4 text-indigo-800">¿No encuentra la respuesta que busca?</h2>
+                <p class="text-gray-700 mb-6">Nuestro equipo de bibliotecarios está aquí para ayudarle con cualquier consulta específica</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="referencia-online.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                        Contactar Especialista
+                    </a>
+                    <button class="bg-white text-indigo-600 border border-indigo-600 hover:bg-indigo-50 font-semibold py-3 px-6 rounded-lg transition-colors">
+                        Chat en Vivo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Nexus Académico. Un Ecosistema de Conocimiento Digital.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad de FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const content = question.nextElementSibling;
+                const arrow = question.querySelector('.faq-arrow');
+                
+                // Cerrar otros FAQs abiertos
+                document.querySelectorAll('.faq-content').forEach(otherContent => {
+                    if (otherContent !== content) {
+                        otherContent.classList.remove('active');
+                        otherContent.previousElementSibling.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle del FAQ actual
+                content.classList.toggle('active');
+                arrow.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            });
+        });
+
+        // Filtrado por categorías
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                
+                // Actualizar botones activos
+                document.querySelectorAll('.category-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-indigo-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                btn.classList.remove('bg-gray-200', 'text-gray-700');
+                btn.classList.add('active', 'bg-indigo-600', 'text-white');
+                
+                // Filtrar FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Búsqueda en FAQs
+        document.getElementById('faq-search').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-content p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
